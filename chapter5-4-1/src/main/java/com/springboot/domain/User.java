@@ -1,7 +1,7 @@
 package com.springboot.domain;
 
 /**
- * Created by shijuan on 2018/3/15.
+ * Created by shijuan on 2018/3/15
  */
 public class User {
 
