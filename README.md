@@ -2,9 +2,9 @@
 # springboot
 ## Spring Boot 基础笔记
 ### 基础入门
-- chapter1：[引入web模块，完成一个简单的RESTful API 使用idea中的Spring Initializr来快速构建Spring Boot工程](https://github.com/JUAN-SHI/SpringBoot-Learning/commit/8479a2adc2505b40d6531c550123d57a1fff2792)
+- chapter1：[引入web模块，完成一个简单的RESTful API 使用idea中的Spring Initializr来快速构建Spring Boot工程](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter1)
 ### 工程配置
-- chapter2：[配置文件详解：自定义属性、随机数、多环境配置等](https://github.com/JUAN-SHI/SpringBoot-Learning/commit/8479a2adc2505b40d6531c550123d57a1fff2792)
+- chapter2：[配置文件详解：自定义属性、随机数、多环境配置等](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter2)
 1. 自定义属性与加载
 ```
  在application.properties中直接定义，然后通过@Value("${属性名}")注解来加载对应的配置属性
@@ -58,7 +58,7 @@ application-{profile}.properties中配置各个环境不同的内容
 ```
 
 ### Web开发
-- chapter3-1-1：[构建一个较为复杂的RESTful API以及单元测试](http://www.baidu.com "百度一下")
+- chapter3-1-1：[构建一个较为复杂的RESTful API以及单元测试](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter3-1-1)
 - RESTful API具体设计如下：
 
 |  请求类型 |    URL    | 功能说明        |
@@ -75,12 +75,12 @@ application-{profile}.properties中配置各个环境不同的内容
 @RestController：Spring4之后加入的注解，原来在@Controller中返回json需要@ResponseBody来配合，如果直接用@RestController替代@Controller就不需要再配置@ResponseBody，默认返回json格式。
 @RequestMapping：配置url映射
 ```
-- chapter3-1-2：[统一异常处理](http://www.baidu.com "百度一下")
+- chapter3-1-2：[统一异常处理](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter3-1-2)
 1. 创建全局异常处理类：通过使用@ControllerAdvice定义统一异常处理类，而不是在每个Controller中逐个定义，@ExceptionHandler用来定义函数针对的异常类型，最后将Exception对象和请求URL映射到error.html中
 2. 返回JSON格式（@ExceptionHandler之后加入@ResponseBody，就能让处理函数return的内容转换为JSON格式）
 
 ### 安全管理
-- chapter4-1-1：[使用Security进行安全控制](http://www.baidu.com "百度一下")
+- chapter4-1-1：[使用Security进行安全控制](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter4-1-1)
 ```
 创建Spring Security的配置类WebSecurityConfig,具体如下：
 * 通过@EnableWebSecurity注解开启Spring Security的功能
@@ -93,7 +93,7 @@ application-{profile}.properties中配置各个环境不同的内容
 一个用户，该用户的名称为user,密码为password，用户角色为USER。
 ```
 ### 数据访问
-- chapter5-1-1：[使用JdbcTemplate](http://www.baidu.com "百度一下")
+- chapter5-1-1：[使用JdbcTemplate](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter5-1-1)
 ```
 数据源配置
     为了连接数据库需要引入jdbc支持，在pom.xml中引入如下配置：
@@ -115,7 +115,7 @@ application-{profile}.properties中配置各个环境不同的内容
    spring.datasource.username=root
    spring.datasource.password=111111
 ```
-- chapter5-1-2：[使用Spring-data-jpa简化数据访问层（推荐）](http://www.baidu.com "百度一下")
+- chapter5-1-2：[使用Spring-data-jpa简化数据访问层（推荐）](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter5-1-2)
 ```
 配置：
     
@@ -141,7 +141,7 @@ application-{profile}.properties中配置各个环境不同的内容
     validate：每次加载hibernate时，验证创建数据库表结构，只会和数据库中的表进行比较，不会创建新表，但是会插入新值。
     update：最常用的属性，第一次加载hibernate时根据model类会自动建立起表的结构（前提是先建立好数据库),以后加载hibernate时根据model类自动更新表 
 ```
-- chapter5-2-1：[多数据源配置（一）：JdbcTemplate](http://www.baidu.com "百度一下")
+- chapter5-2-1：[多数据源配置（一）：JdbcTemplate](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter5-2-1)
 ```
  多数据源配置：
     创建一个Spring配置类，定义两个DataSource用来读取application.properties中的不同配置。如下例子中，主数据源配置为spring.datasource.primary开头的配置，第二数据源配置为spring.datasource.secondary开头的配置
@@ -156,15 +156,15 @@ spring.datasource.secondary.username=root
 spring.datasource.secondary.password=111111
 spring.datasource.secondary.driver-class-name=com.mysql.jdbc.Driver
 ```
-- chapter5-2-2：[多数据源配置（二）：Spring-data-jpa](http://www.baidu.com "百度一下")
+- chapter5-2-2：[多数据源配置（二）：Spring-data-jpa](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter5-2-2)
 ```
 新增对第一数据源的JPA配置，注意两处注释的地方，用于指定数据源对应的Entity实体和Repository定义位置，用@Primary区分主数据源
 ```
-- chapter5-3-1：[使用NoSQL数据库（一）：Redis](http://www.baidu.com "百度一下")
+- chapter5-3-1：[使用NoSQL数据库（一）：Redis](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter5-3-1)
 ```
 Spring Boot提供的数据访问框架Spring Data Redis基于Jedis.详细操作查看Redis官方文档
 ```
-- chapter5-4-1：[整合MyBatis](http://www.baidu.com "百度一下") ·
+- chapter5-4-1：[整合MyBatis](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter5-4-1) ·
 ```
 整合Mybaties在pom.xml中引入依赖：
  <dependency>
@@ -176,7 +176,7 @@ Spring Boot提供的数据访问框架Spring Data Redis基于Jedis.详细操作�
  引入整合mybaties的核心依赖mybatis-spring-boot-starter
  这里不引入spring-boot-starter-jdbc依赖，是由于mybatis-spring-boot-starter中已经包含了此依赖
 ```
-- chapter5-4-2：[MyBatis注解配置详解](http://www.baidu.com "百度一下")
+- chapter5-4-2：[MyBatis注解配置详解](https://github.com/JUAN-SHI/SpringBoot-Learning/tree/master/chapter5-4-2)
 ```
 * 传参方式：
     使用@Param
