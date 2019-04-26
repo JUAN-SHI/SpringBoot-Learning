@@ -2,9 +2,9 @@
 # springboot
 ## Spring Boot 基础笔记
 ### 基础入门
-- chapter1：[引入web模块，完成一个简单的RESTful API 使用idea中的Spring Initializr来快速构建Spring Boot工程](http://www.baidu.com "百度一下")
+- chapter1：[引入web模块，完成一个简单的RESTful API 使用idea中的Spring Initializr来快速构建Spring Boot工程](https://github.com/JUAN-SHI/SpringBoot-Learning/commit/8479a2adc2505b40d6531c550123d57a1fff2792)
 ### 工程配置
-- chapter2：[配置文件详解：自定义属性、随机数、多环境配置等]()
+- chapter2：[配置文件详解：自定义属性、随机数、多环境配置等](https://github.com/JUAN-SHI/SpringBoot-Learning/commit/8479a2adc2505b40d6531c550123d57a1fff2792)
 1. 自定义属性与加载
 ```
  在application.properties中直接定义，然后通过@Value("${属性名}")注解来加载对应的配置属性
